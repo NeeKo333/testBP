@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "SF Pro";
+  src: url("../assets/fonts/SFPro.woff2") format("woff2"),
+    url("../assets/fonts/SFPro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Heavy";
+  src: url("../assets/fonts/SFProHeavy.woff2") format("woff2"),
+    url("../assets/fonts/SFProHeavy.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/SFProDisplay.woff2") format("woff2"),
+    url("../assets/fonts/SFProDisplay.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}

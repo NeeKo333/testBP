@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>IOS</title>
+  </head>
+
+  <body>
+    <section class="main">
+      <img
+        class="main__bg"
+        srcset="
+          assets/img/lg_bg@1x.png  390w,
+          assets/img/lg_bg@2x.png  780w,
+          assets/img/lg_bg@3x.png 1170w
+          assets/img/sm_bg@1x.jpg  375w,
+          assets/img/sm_bg@2x.jpg  750w,
+          assets/img/sm_bg@3x.jpg 1125w,
+        "
+        sizes="(min-height: 811px) 390px, (max-height: 811px) 375px, 100vw"
+        src="assets/img/lg_bg@1x.png"
+        alt="background"
+      />
+
+      <div class="container">
+        <a href="#" class="main__close">
+          <img
+            class="main__close-icon"
+            src="assets/img/Cross.svg"
+            alt="close button"
+          />
+        </a>
+
+        <h1 class="main__title" data-lang="Get Unlimited <br>Access"></h1>
+
+        <div class="main__cards">
+          <div class="main__cards-item main__cards-item_blue">
+            <img
+              class="main__cards-item__bg"
+              srcset="
+                assets/img/f1.png    1x,
+                assets/img/f1@2x.png 2x,
+                assets/img/f1@3x.png 3x
+              "
+              src="assets/img/f1.png"
+              alt="card one"
+            />
+            <h3
+              class="main__cards-item__title"
+              data-lang="Unlimited Art <br>Creation"
+            ></h3>
+            <div class="main__cards-item__shadow"></div>
+            <div class="main__cards-item__title-shadow"></div>
+          </div>
+
+          <div class="main__cards-item">
+            <img
+              class="main__cards-item__bg"
+              srcset="
+                assets/img/f2.png    1x,
+                assets/img/f2@2x.png 2x,
+                assets/img/f2@3x.png 3x
+              "
+              src="assets/img/f2.png"
+              alt="card two"
+            />
+            <h3
+              class="main__cards-item__title"
+              data-lang="Exclusive <br>Styles"
+            ></h3>
+            <div class="main__cards-item__shadow"></div>
+            <div class="main__cards-item__title-shadow"></div>
+          </div>
+
+          <div class="main__cards-item">
+            <img
+              class="main__cards-item__bg"
+              srcset="
+                assets/img/f3.png    1x,
+                assets/img/f3@2x.png 2x,
+                assets/img/f3@3x.png 3x
+              "
+              src="assets/img/f3.png"
+              alt="card three"
+            />
+            <h3
+              class="main__cards-item__title"
+              data-lang="Magic Avatars <br>With 20% Off"
+            ></h3>
+            <div class="main__cards-item__shadow"></div>
+            <div class="main__cards-item__title-shadow"></div>
+          </div>
+        </div>
+
+        <div class="main__links">
+          <a
+            href="https://apple.com"
+            class="main__links-item main__links-item_active"
+          >
+            <div class="main__links-item__label" data-lang="BEST OFFER"></div>
+
+            <div class="main__links-item__title-wrapper">
+              <h3
+                class="main__links-item__title"
+                data-lang="YEARLY ACCESS"
+              ></h3>
+              <p
+                class="main__links-item__subtitle"
+                data-lang="Just {{price}} per year"
+                data-price="yearly-full"
+              ></p>
+            </div>
+
+            <div
+              class="main__links-item__price"
+              data-lang="{{price}} <br>per week"
+              data-price="yearly-week"
+            ></div>
+          </a>
+
+          <a href="https://google.com" class="main__links-item">
+            <h3 class="main__links-item__title" data-lang="WEEKLY ACCESS"></h3>
+            <div
+              class="main__links-item__price"
+              data-lang="{{price}} <br>per week"
+              data-price="weekly-week"
+            ></div>
+          </a>
+          <a href="#" class="main__links-btn" data-lang="Continue"></a>
+        </div>
+
+        <div class="main__footer">
+          <a href="#" class="main__footer-link" data-lang="Terms of Use"></a>
+          <a href="#" class="main__footer-link" data-lang="Privacy Policy"></a>
+          <a href="#" class="main__footer-link" data-lang="Restore"></a>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

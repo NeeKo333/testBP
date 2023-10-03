@@ -1,0 +1,295 @@
+@import "./_reset.scss";
+@import "./_mixins.scss";
+@import "./_variables.scss";
+@import "./_functions.scss";
+@import "./_fonts.scss";
+
+body {
+  height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  font-family: SF Pro;
+  color: #fff;
+}
+
+.container {
+  width: 88vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  position: relative;
+}
+
+.main {
+  height: 100%;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__close {
+    position: absolute;
+    top: 8.5vh;
+    left: 0;
+    width: 3vw;
+    height: 3vw;
+
+    &-ico {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 rem(48) rgba(4, 3, 26, 0.83);
+    font-family: SF Pro Heavy;
+    font-size: rem(42);
+    font-style: normal;
+    font-weight: 860;
+    line-height: rem(46);
+  }
+
+  &__cards {
+    margin-top: 5.9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10);
+
+    &-item {
+      width: 26.76vw;
+      height: 35.53vw;
+      position: relative;
+      background-color: rgba(255, 130, 228, 0.24);
+      border-radius: 2.76vw;
+
+      &__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: bottom;
+        border-radius: 2.76vw;
+      }
+
+      &__title {
+        position: absolute;
+        font-family: SF Pro;
+        font-size: rem(11);
+        line-height: 110%;
+        font-weight: 400;
+        bottom: 7.93%;
+        left: 6.9%;
+        text-transform: capitalize;
+        z-index: 1;
+
+        &-shadow {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(4, 6, 26, 0) 62.04%,
+            rgba(6, 9, 37, 0.56) 76.68%,
+            #15072f 100%
+          );
+          border-radius: 0 0 2.76vw 2.76vw;
+        }
+      }
+
+      &__shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 130, 228, 0.1);
+        z-index: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -0.9px;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 3px);
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(0, 0, 0, 0) 7%,
+          rgba(0, 0, 0, 0) 93%,
+          rgba(255, 255, 255, 0.2) 100%
+        );
+        border-radius: 2.76vw;
+        z-index: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -3vw;
+        right: 0;
+        width: 35.53vw;
+        height: 18.71vw;
+        background: radial-gradient(circle, #00bfff, transparent);
+        mix-blend-mode: overlay;
+        filter: blur(30.580669403076172px);
+        z-index: 0;
+      }
+    }
+  }
+
+  &__links {
+    margin-top: 5.88vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.94vh;
+
+    &-item {
+      font-size: rem(16);
+      width: 100%;
+      min-height: 14.4vw;
+      border-radius: 8.2vw;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: rem(20);
+      justify-content: space-between;
+      padding: 0 16.15vw 0 6.15vw;
+      position: relative;
+
+      &__label {
+        position: absolute;
+        text-transform: uppercase;
+        top: 0;
+        right: 6.15vw;
+        border-radius: 2.56vw;
+        padding: 0.64vw 5.78vw;
+        background-color: #fff;
+        color: #141131;
+        font-family: "Roboto", Arial, sans-serif;
+        transform: translate(0, -50%);
+        font-weight: 700;
+        font-size: rem(13);
+      }
+
+      &__price {
+        color: rgba(255, 255, 255, 0.7);
+        @include breakpoint-down(mobile-small) {
+          html.lang-de &,
+          html.lang-fr &,
+          html.lang-pt & {
+            font-size: rem(13);
+          }
+        }
+      }
+
+      &_active {
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.3);
+        align-items: center;
+        & .main__links-item__price {
+          margin-top: 1.79vw;
+        }
+      }
+
+      &__title-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.512vw;
+      }
+
+      &__title {
+        color: #fff;
+        font-family: SF Pro Display;
+        font-size: rem(16);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @include breakpoint-down(mobile-small) {
+          html.lang-de &,
+          html.lang-fr &,
+          html.lang-pt & {
+            font-size: rem(13);
+          }
+        }
+      }
+
+      &__subtitle {
+        font-family: SF Pro Display;
+        color: rgba(255, 255, 255, 0.7);
+        @include breakpoint-down(mobile-small) {
+          html.lang-de &,
+          html.lang-fr &,
+          html.lang-pt & {
+            font-size: rem(13);
+          }
+        }
+      }
+    }
+
+    &-btn {
+      display: block;
+      text-align: center;
+      padding: 4.1vw 0;
+      text-decoration: none;
+      margin-top: 1.895vh;
+      width: 100%;
+      height: 14.35vw;
+      border-radius: 8.2vw;
+      background-color: #fff;
+      color: #070b33;
+      font-family: SF Pro;
+      font-size: rem(20);
+      font-weight: 590;
+      line-height: 120%;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    margin: 5.21vh 0 3.67vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &-link {
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      font-family: SF Pro;
+      font-size: rem(12.5);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.577px;
+
+      @include breakpoint-down(mobile-small) {
+        html.lang-de &,
+        html.lang-fr &,
+        html.lang-pt & {
+          font-size: rem(11.5);
+        }
+      }
+    }
+  }
+}

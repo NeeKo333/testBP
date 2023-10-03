@@ -1,0 +1,13 @@
+@import "./functions";
+@import "./mixins";
+
+$responsive-ios: 812px;
+
+$breakpoints: (
+  mobile-small: 391px,
+  mobile: 767px,
+  tablet: 1023px,
+  small-desktop: 1279px,
+  desktop: 1439px,
+  large-desktop: 1719px,
+);
